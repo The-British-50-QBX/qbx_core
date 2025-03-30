@@ -8,12 +8,12 @@ return {
         moneyTypes = { cash = 500, bank = 5000, crypto = 0 }, -- type = startamount - Add or remove money types for your server (for ex. blackmoney = 0), remember once added it will not be removed from the database!
         dontAllowMinus = { 'cash', 'crypto' }, -- Money that is not allowed going in minus
         paycheckTimeout = 10, -- The time in minutes that it will give the paycheck
-        paycheckSociety = false -- If true paycheck will come from the society account that the player is employed at
+        paycheckSociety = true -- If true paycheck will come from the society account that the player is employed at
     },
 
     player = {
-        hungerRate = 4.2, -- Rate at which hunger goes down.
-        thirstRate = 3.8, -- Rate at which thirst goes down.
+        hungerRate = 5.2, -- Rate at which hunger goes down.
+        thirstRate = 4.8, -- Rate at which thirst goes down.
 
         ---@enum BloodType
         bloodTypes = {
@@ -68,7 +68,7 @@ return {
         {'player_vehicles', 'citizenid'},
         {'player_groups', 'citizenid'},
         {'players', 'citizenid'},
-        {'npwd_calls', 'identifier'},
+        --[[{'npwd_calls', 'identifier'},
         {'npwd_darkchat_channel_members', 'user_identifier'},
         {'npwd_marketplace_listings', 'identifier'},
         {'npwd_messages_participants', 'participant'},
@@ -76,7 +76,7 @@ return {
         {'npwd_phone_contacts', 'identifier'},
         {'npwd_phone_gallery', 'identifier'},
         {'npwd_twitter_profiles', 'identifier'},
-        {'npwd_match_profiles', 'identifier'},
+        {'npwd_match_profiles', 'identifier'},]]--
     }, -- Rows to be deleted when the character is deleted
 
     server = {
