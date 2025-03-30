@@ -2,28 +2,28 @@
 ---@type table<string, Job>
 return {
     ['unemployed'] = {
-        label = 'Civilian',
+        label = 'Benefit Sponge',
         defaultDuty = true,
         offDutyPay = false,
         grades = {
             [0] = {
-                name = 'Freelancer',
+                name = 'Scrounger',
                 payment = 10
             },
         },
     },
     ['police'] = {
-        label = 'LSPD',
+        label = 'Met Police',
         type = 'leo',
         defaultDuty = true,
         offDutyPay = false,
         grades = {
             [0] = {
-                name = 'Recruit',
+                name = 'PCSO',
                 payment = 50
             },
             [1] = {
-                name = 'Officer',
+                name = 'PC',
                 payment = 75
             },
             [2] = {
@@ -31,13 +31,13 @@ return {
                 payment = 100
             },
             [3] = {
-                name = 'Lieutenant',
+                name = 'Inspector',
                 payment = 125
             },
             [4] = {
-                name = 'Chief',
+                name = 'Chief Superintendant',
                 isboss = true,
-                bankAuth = true,
+                bankAuth = false,
                 payment = 150
             },
         },
@@ -103,7 +103,7 @@ return {
         },
     },
     ['ambulance'] = {
-        label = 'EMS',
+        label = 'NHS',
         type = 'ems',
         defaultDuty = true,
         offDutyPay = false,
@@ -127,7 +127,7 @@ return {
             [4] = {
                 name = 'Chief',
                 isboss = true,
-                bankAuth = true,
+                bankAuth = false,
                 payment = 150
             },
         },
@@ -346,6 +346,64 @@ return {
             [0] = {
                 name = 'Sales',
                 payment = 50
+            },
+        },
+    },
+    ['burgershot'] = {
+        label = 'Burger Shot',
+        defaultDuty = false,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Pot Washer',
+                payment = 50
+            },
+            [1] = {
+                name = 'Waiting Staff',
+                payment = 75
+            },
+            [2] = {
+                name = 'Burger Flipper',
+                payment = 100
+            },
+            [3] = {
+                name = 'Manager',
+                payment = 125
+            },
+            [4] = {
+                name = 'Owner',
+                isboss = true,
+                bankAuth = true,
+                payment = 150
+            },
+        },
+    },
+    ['uwucatcafe'] = {
+        label = 'UWU Cat Cafe Employee',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Recruit',
+                payment = 200
+            },
+            ['1'] = {
+                name = 'Trainee',
+                payment = 200
+            },
+            ['2'] = {
+                name = 'Employee',
+                payment = 200
+            },
+            ['3'] = {
+                name = 'Manager',
+                isboss = false,
+                payment = 200
+            },
+            ['4'] = {
+                name = 'CEO',
+                isboss = true,
+                payment = 200
             },
         },
     },
